@@ -6,7 +6,7 @@ setuptools.setup(
         author="Traitor 1561",
         author_email="therundown91@gmail.com",
         description="This is some stuff for some random repository",
-        url="https://github.com/traitor1561/CS_162_Rochester"
-        packages=setuptools.find_packages(),
+        url="https://github.com/traitor1561/CS_162_Rochester",
+        packages=setuptools.find_packages()
         )
 
