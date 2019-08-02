@@ -92,7 +92,7 @@ class AVLTreeNode(TreeNode):
 
 if __name__ == '__main__':
     import random
-    nums = random.sample(range(100), 10)
+    nums = random.sample(range(100), 40)
     print(nums)
     bst = AVLBinarySearchTree()
     for i, j in zip(nums, list(range(len(nums)))):
