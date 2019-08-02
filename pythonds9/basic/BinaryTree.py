@@ -34,3 +34,16 @@ class BinaryTree():
     def get_root_val(self):
         return self.key
 
+
+if __name__ == '__main__':
+    r = BinaryTree('a')
+    print('rootvalue')
+    print(r.get_root_val())
+    print('leftchild')
+    print(r.get_left_child())
+    print(r.insert_left('b'))
+    print('leftchild after insertion')
+    print(r.get_left_child())
+    print(r.get_left_child().get_root_val())
+
+
