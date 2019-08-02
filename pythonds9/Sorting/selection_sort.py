@@ -9,7 +9,13 @@ def selection_sort(alist):
         alist[fill_slot], alist[pos_of_max] =\
                 alist[pos_of_max], alist[fill_slot]
 
-alist = [random.randrange(10) for i in range(6)]
-print(alist)
-selection_sort(alist)
-print(alist)
+
+
+if __name__ == '__main__':
+    alist = [random.randrange(10) for i in range(6)]
+    print('before sorting')
+    print(alist)
+    selection_sort(alist)
+    print('after sorting')
+    print(alist)
+

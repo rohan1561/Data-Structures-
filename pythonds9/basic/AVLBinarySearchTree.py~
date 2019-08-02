@@ -1,5 +1,5 @@
-from pythonds9.BinarySearchTree import BinarySearchTree
-from pythonds9.BinarySearchTree import TreeNode
+from pythonds9 import BinarySearchTree.BinarySearchTree
+from pythonds9 import BinarySearchTree.TreeNode
 class AVLBinarySearchTree(BinarySearchTree):
     def _put(self, key, val, current_node):
         if key < current_node.key:

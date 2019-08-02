@@ -1,4 +1,8 @@
-from .basic import Node, Stack, Queue, Deque, BinaryTree
-
-__ALL__ = [Node, Stack, Queue, Deque, BinaryTree]
-
+from .import Deque
+from .import List
+from .import Queue
+from .import Recursion
+from .import Searching
+from .import Sorting
+from .import Stack
+from .import Trees

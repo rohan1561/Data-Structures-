@@ -1,0 +1,57 @@
+from Stack import Stack
+
+def par_checker(symbolString):
+     s = Stack()
+     balanced = True
+     index = 0
+     while index < len(symbolString) and balanced:
+         symbol = symbolString[index]
+         if symbol == "(":
+             s.push(symbol)
+         else:
+             if s.is_empty():
+                 balanced = False
+             else:
+                 s.pop()
+         index = index + 1
+
+     if balanced and s.is_empty():
+         return True
+     else:
+         return False
+#print(par_checker('((()))'))
+#print(par_checker('(()'))
+
+
+def par_checker_new(symbolString):
+     s = Stack()
+     balanced = True
+     index = 0
+     while index < len(symbolString) and balanced:
+         symbol = symbolString[index]
+         if symbol in  "([{<":
+             s.push(symbol)
+         else:
+             if s.is_empty():
+                 balanced = False
+             else:
+                 top = s.pop()
+                 if not matches(top, symbol):
+                     balanced = False
+         index = index + 1
+
+     if balanced and s.is_empty():
+         return True
+     else:
+         return False
+
+
+def matches(_open, close):
+    openers = '([{<'
+    closers = ')]}>'
+    return openers.index(_open) == closers.index(close)
+
+#print(par_checker_new('<{{[[()]]}}>'))
+#print(par_checker_new('{{[[()]]}]'))
+
+

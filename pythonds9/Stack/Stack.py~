@@ -1,0 +1,38 @@
+class Stack:
+    def __init__(self):
+        self.stack = list()
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        return self.stack.pop()
+
+    def peek(self):
+        item = self.stack[-1]
+        return item
+
+    def is_empty(self):
+        return self.stack == []
+
+    def size(self):
+        return len(self.stack)
+
+    def __repr__(self):
+        print(self.stack)
+
+if __name__ == '__main__()':
+    s = Stack()
+    print(s.is_empty())
+    s.push(4)
+    s.push('Rohan')
+    print(s.peek())
+    s.push(True)
+    print(s.size())
+    print(s.is_empty())
+    s.push(8.4)
+    s.pop()
+    s.pop()
+    print(s.size())
+
+

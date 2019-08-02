@@ -1,4 +1,7 @@
 import random
+import timeit
+
+
 def bubble_sort(alist):
     for passnum in range(len(alist)-1, 0, -1):
         for i in range(passnum):
@@ -11,23 +14,33 @@ def short_bubble_sort(alist):
     pass_num = len(alist) - 1
     while pass_num > 0 and exchanges:
         exchanges = False
-        print(f'pass{len(alist) - pass_num}')
+        #print(f'pass{len(alist) - pass_num}')
         for i in range(pass_num):
             if alist[i] > alist[i+1]:
                 exchanges = True
                 alist[i], alist[i+1] = alist[i+1], alist[i]
         pass_num -= 1
 
+
 alist = [random.randrange(10) for i in range(5)]
 print(alist)
 bubble_sort(alist)
 print(alist)
+print('Time for 1000 sorts')
+print('short bubble sort')
+print(timeit.timeit('short_bubble_sort([random.randrange(100) for i in ra'\
+        'nge(100)])', globals=globals(), number=5000))
 
+print('bubble sort')
+print(timeit.timeit('bubble_sort([random.randrange(100) for i in ra'\
+        'nge(100)])', globals=globals(), number=5000))
 print('xxxxxxxxxxxxx')
 blist = [random.randrange(10) for i in range(5)]
 print(blist)
 print('short bubble sort')
 short_bubble_sort(blist)
 print(blist)
+
+
 
 

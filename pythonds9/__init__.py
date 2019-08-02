@@ -1,6 +1,8 @@
-from .basic import Node, Stack, Queue, Deque, BinaryTree, BinarySearchTree
-from .basic import BinaryHeap, BuildParseTree, AVLBinarySearchTree
-
-__ALL__ = [Node, Stack, Queue, Deque, BinaryTree, BinarySearchTree,\
-        BinaryHeap, BuildParseTree, AVLBinarySearchTree]
-
+from . import Deque
+from . import List
+from . import Queue
+from . import Recursion
+from . import Searching
+from . import Sorting
+from . import Stack
+from . import Trees
