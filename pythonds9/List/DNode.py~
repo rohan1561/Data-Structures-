@@ -9,6 +9,10 @@ class DNode(Node):
     def set_prev(self, item):
         self.prev = item
 
+    def get_prev(self):
+        return self.prev
+
+
 if __name__ == '__main__':
     test = DNode(24)
     print(test.get_data())
