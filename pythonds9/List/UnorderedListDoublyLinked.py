@@ -1,5 +1,5 @@
-from Node import Node
-from UnorderedList import UnorderedList as UL
+from .Node import Node
+from .UnorderedList import UnorderedList as UL
 
 class UnorderedListDL(UnorderedList):
     def __init__(self):

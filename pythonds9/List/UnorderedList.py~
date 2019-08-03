@@ -29,7 +29,7 @@ class UnorderedList:
         return count
 
     def search(self, item):
-        """Returns: bool. If an element is persent or not"""
+        """Returns: bool. If an element is present or not"""
         current = self.head
         found = False
         while current != None and not found:
