@@ -1,0 +1,2 @@
+from binary_search import binary_search
+from sequential_search import sequential_search

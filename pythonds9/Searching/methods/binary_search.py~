@@ -1,6 +1,7 @@
 import random
 from math import log2
-def bin_search(alist, item):
+
+def binary_search(alist, item):
     global count
     count += 1
     mid = len(alist)//2

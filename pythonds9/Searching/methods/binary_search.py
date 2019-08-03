@@ -1,6 +1,8 @@
 import random
 from math import log2
-def bin_search(alist, item):
+
+count = 0
+def binary_search(alist, item):
     global count
     count += 1
     mid = len(alist)//2
@@ -21,9 +23,7 @@ if __name__ == '__main__':
     print(f'{item} is to be searched')
     print('list is')
     print(sample)
-    count = 0
     print(bin_search(sample, item))
     print(f'number of steps taken {count}')
-    bound = log2(60)
-    print('upper bound of the number of steps = {bound}')
+    print(f'upper bound of the number of steps = {log2(60)}')
 
