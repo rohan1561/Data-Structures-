@@ -1,4 +1,4 @@
-from Deque import Deque
+from ..Deque import Deque
 
 def palchecker(string):
     chars = Deque()
@@ -14,7 +14,4 @@ def palchecker(string):
             check = False
 
     return check
-
-print(palchecker('testing'))
-print(palchecker('oto'))
 

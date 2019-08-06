@@ -1,7 +1,5 @@
 import string
 
-print(string.ascii_uppercase)
-print(string.digits)
 def to_str(n, base):
     convert_string = string.digits + string.ascii_uppercase[0:6]
     if n < base:
@@ -9,5 +7,8 @@ def to_str(n, base):
     else:
         return to_str(n//base) + convert_string(n % base)
 
-print(to_str(34, 10))
+if __name__ == '__main__':
+    print(string.ascii_uppercase)
+    print(string.digits)
+    print(to_str(34, 10))
 

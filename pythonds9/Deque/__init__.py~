@@ -1,1 +1,1 @@
-from . import Deque
+from .Deque import Deque

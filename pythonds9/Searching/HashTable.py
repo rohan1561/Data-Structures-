@@ -1,3 +1,5 @@
+from .methods import get_names
+
 class HashTable:
     def __init__(self, size, Dict={}):
         self.size = size
@@ -102,13 +104,6 @@ class HashTable:
             if self.slots[i] is not None:
                 return self.slots[i]
             
-
-def get_names():
-    url = 'http://www.pas.rochester.edu/~rsarkis/csc161/_static/data/'\
-            'census-dist-female-first.txt'
-    text = requests.get(url).text.split('\r\n')
-    return text
-
 
 if __name__ == '__main__':
     names = get_names()

@@ -1,5 +1,5 @@
-from .. import Stack.Stack.Stack
 from pythonds9 import BinaryTree
+from pythonds9 import Stack
 
 def BuildParseTree(fpexp):
     fplist = fpexp.split()

@@ -1,7 +1,5 @@
 from random import sample
 
-nums = sample(range(20), k=10)
-
 def quick_sort(alist):
     if len(alist) <= 1:
         return alist
@@ -29,5 +27,7 @@ def quick_sort(alist):
 
     return answer
 
-print(quick_sort(nums))
+if __name__ == '__main__':
+    nums = sample(range(20), k=10)
+    print(quick_sort(nums))
 

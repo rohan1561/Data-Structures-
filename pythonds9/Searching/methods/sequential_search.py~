@@ -14,5 +14,5 @@ def sequential_search(alist, item):
 
 testlist = random.sample(range(10), 6)
 print(testlist)
-print(sequential_search(testlist, 6))
+print(sequential_search(testlist, 7))
 

@@ -1,0 +1,1 @@
+from .palchecker import palchecker

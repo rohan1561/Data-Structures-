@@ -8,5 +8,6 @@ def permutation(s, prefix=""):
         for i in range(n):
             permutation(s[0:i] + s[i+1:n], prefix + s[i])
 
-print(permutation('test'))
+if __name__ == '__main__':
+    print(permutation('test'))
 

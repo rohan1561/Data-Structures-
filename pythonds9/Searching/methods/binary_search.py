@@ -13,9 +13,9 @@ def binary_search(alist, item):
     elif len(alist) == 0:
         return False
     elif item < alist[mid]:
-        return bin_search(alist[:mid], item)
+        return binary_search(alist[:mid], item)
     else:
-        return bin_search(alist[mid:], item)
+        return binary_search(alist[mid:], item)
 
 if __name__ == '__main__':
     item = random.randrange(60)

@@ -12,7 +12,9 @@ def sequential_search(alist, item):
 
     return found
 
-testlist = random.sample(range(10), 6)
-print(testlist)
-print(sequential_search(testlist, 7))
+
+if __name__ == '__main__':
+    testlist = random.sample(range(10), 6)
+    print(testlist)
+    print(sequential_search(testlist, 7))
 

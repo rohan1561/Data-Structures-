@@ -1,5 +1,4 @@
-from Node import Node
-from ParChecker import par_checker_new
+from .Node import Node
 
 class Stack:
     """
@@ -115,6 +114,7 @@ class Stack:
         return 'Stack ' + ','.join(str(i) for i in answer) 
 
 if __name__ == '__main__':
+    from ParChecker import par_checker_new
     print(par_checker_new('<{{[[()]]}}>'))
     print(par_checker_new('{{[[()]]}]'))
 

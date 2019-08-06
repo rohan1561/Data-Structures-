@@ -10,11 +10,7 @@ def quick_sort(alist):
     while left <= right:
         if alist[left] > pivot:
             if alist[right] < pivot:
-                print('before swapping left and right')
-                print(alist)
                 alist[left], alist[right] = alist[right], alist[left]
-                print('after swapping left and right')
-                print(alist)
                 left += 1
                 continue
             right -= 1

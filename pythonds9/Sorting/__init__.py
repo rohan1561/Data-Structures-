@@ -1,7 +1,7 @@
-from . import bubble_sort
-from . import insertion_sort
-from . import merge_sort
-from . import quick_sort
-from . import shell_sort
-from . import selection_sort
+from .bubble_sort import bubble_sort
+from .insertion_sort import insertion_sort
+from .merge_sort import merge_sort
+from .quick_sort import quick_sort
+from .shell_sort import shell_sort
+from .selection_sort import selection_sort
 

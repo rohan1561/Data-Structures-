@@ -115,5 +115,6 @@ class Stack:
         return 'Stack ' + ','.join(str(i) for i in answer) 
 
 if __name__ == '__main__':
-    print(par_checker_new('{}'))
+    print(par_checker_new('<{{[[()]]}}>'))
+    print(par_checker_new('{{[[()]]}]'))
 
