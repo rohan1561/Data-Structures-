@@ -1,4 +1,4 @@
-from Vertex import Vertex
+from .Vertex import Vertex
 
 class Graph:
     def __init__(self):
