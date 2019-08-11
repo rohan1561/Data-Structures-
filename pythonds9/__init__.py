@@ -5,3 +5,5 @@ from . import Searching
 from . import Sorting
 from . import Stack
 from . import Trees
+from . import Graphs
+from . import Visualizer
