@@ -1,0 +1,14 @@
+from graphviz import Digraph
+
+g = Digraph()
+
+def viz_graph(g):
+    dot = Digraph()
+    
+    for v in g:
+        for w in v.get_connections():
+            dot.node(str(v.get_id()))
+            dot.node(str(w.get_id()))
+
+            dot.edge(str(v.get_id()), str(w.get_id()),
+                    label=str(v.connected_to[w]))

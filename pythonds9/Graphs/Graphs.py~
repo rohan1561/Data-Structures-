@@ -1,0 +1,32 @@
+class Graph:
+    def __init__(self):
+        self.vertlist = {}
+        self.num_vertices = 0
+
+    def add_vertex(self, key):
+        self.num_vertices += 1
+        new_vertex = Vertex(key)
+        self.verlist[key] = new_vetex
+        return new_vertex
+
+    def get_vertex(self, n):
+        if n in self.vertlist:
+            return self.vertlist[n]
+        else:
+            return None
+
+    def __contains__(self):
+        return n in vertlist
+
+    def add_edge(self, f, t, cost=0):
+        if f not in self.vertlist:
+            nv = self.add_vertex(f)
+        if t not in self.vertlist:
+            nv = self.add_vertex(t)
+        self.vertlist[f].add_neighbour(self.vertlist[t], cost)
+
+    def get_vertices(self):
+        return self.vertlist
+
+    def __iter__(self):
+        return iter(self.vertlist.values())

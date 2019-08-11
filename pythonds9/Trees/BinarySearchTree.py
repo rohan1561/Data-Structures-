@@ -29,12 +29,15 @@ class BinarySearchTree:
                 current_node.left_child = TreeNode(key, val,
                         parent=current_node)
 
-        else:
+        elif key > current_node.key:
             if current_node.has_right_child():
                 self._put(key, val, current_node.right_child)
             else:
                 current_node.right_child = TreeNode(key, val, 
                         parent=current_node)
+        else:
+            current_node.replace_node_data(key, val, current_node.left_child,
+                    current_node.right_child)
 
     def splice_out(self):
         if self.is_leaf():
@@ -76,7 +79,7 @@ class BinarySearchTree:
         else:
             return self._get(key, current_node.right_child)
 
-    def __getitem__(self):
+    def __getitem__(self, key):
         return self.get(key)
 
     def __contains__(self, key):
@@ -241,13 +244,12 @@ class TreeNode:
 
 if __name__ == '__main__':
     import random
-    nums = random.sample(range(100), 30)
+    from Visualizer import viz_graph_bst
+    nums = random.sample(range(100), 7)
     print(nums)
     bst = BinarySearchTree()
-    for i, j in zip(nums, list(range(len(nums)))):
-        bst[i] = j
+    for i, j in zip(list(range(len(nums))), nums):
+        bst[j] = i
 
-    print(bst)
-    for i in bst:
-        print(i)
-       
+    viz = viz_graph_bst(bst.root)
+    viz.view()

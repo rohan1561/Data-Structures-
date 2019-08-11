@@ -1,0 +1,62 @@
+from Vertex import Vertex
+
+class Graph:
+    def __init__(self):
+        self.vertlist = {}
+        self.num_vertices = 0
+
+    def __iter__(self):
+        return iter(self.vertlist.values())
+
+    def __contains__(self):
+        return n in vertlist
+
+    def add_vertex(self, key):
+        if key not in self.vertlist:
+            self.num_vertices += 1
+            new_vertex = Vertex(key)
+            self.vertlist[key] = new_vertex
+
+    def get_vertex(self, n):
+        if n in self.vertlist:
+            return self.vertlist[n]
+        else:
+            return None
+
+    def add_edge(self, f, t, cost=0):
+        if f not in self.vertlist:
+            raise VertexError(f'Vertex key {f} not found')
+        if t not in self.vertlist:
+            raise VertexError(f'Vertex key {t} not found')
+        self.vertlist[f].add_neighbor(self.vertlist[t], cost)
+
+    def get_vertices(self):
+        return self.vertlist
+
+if __name__ == '__main__':
+    from Vertex import Vertex
+    from VertexError import VertexError
+    from Visualizer import viz_graph
+    import matplotlib.pyplot as plt
+
+    G = Graph()
+    for i in range(65, 72):
+        G.add_vertex(chr(i))
+        if i != 65:
+            G.add_edge(chr(i), chr(i-1))
+
+    print(G.get_vertex('A').get_connections())
+
+    '''
+    try:
+        G.add_edge(0, 1, 5)
+    except VertexError:
+        G.add_vertex(0)
+    '''
+
+    for v in G:
+        print(v)
+        print(v.get_connections())
+    viz = viz_graph(G)
+    viz.view()
+    

@@ -1,5 +1,5 @@
-from .BinarySearchTree import BinarySearchTree
-from .BinarySearchTree import TreeNode
+from BinarySearchTree import BinarySearchTree
+from BinarySearchTree import TreeNode
 
 class AVLBinarySearchTree(BinarySearchTree):
     def _put(self, key, val, current_node):

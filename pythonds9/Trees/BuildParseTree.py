@@ -41,6 +41,22 @@ def postorder(tree):
         postorder(tree.get_right_child())
         print(tree.get_root_val())
 
+def evaluate(parse_tree):
+    opers = {'+': operator.add,
+             '-': operator.sub,
+             '*': operator.mul,
+             '/': operator.truediv}
+    left = parse_tree.get_left_child()
+    right = parse_tree.get_right_child()
+
+    if left and right:
+        return opers[parse_tree.get_root_val()](evaluate(left),\
+                evaluate(right))
+
+    else:
+        return parse_tree.get_root_val()
+
+
 def evaluate_post(tree):
     opers = {'+': operator.add,
              '-': operator.sub,

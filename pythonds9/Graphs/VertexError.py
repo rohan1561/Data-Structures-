@@ -1,0 +1,2 @@
+class VertexError(Exception):
+    pass
