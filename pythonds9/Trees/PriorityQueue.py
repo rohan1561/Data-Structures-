@@ -1,4 +1,4 @@
-from BinaryHeap import BinaryHeap
+from .BinaryHeap import BinaryHeap
 
 class PriorityQueue(BinaryHeap):
     def __init__(self, maxlength):

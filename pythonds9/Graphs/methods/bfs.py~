@@ -1,5 +1,5 @@
 from pythonds9.Queue import Queue
-from ..BuildGraph import build_graph
+from BuildGraph import build_graph
 import requests
 from io import StringIO
 

@@ -1,12 +1,11 @@
-from Graph import Graph
-from pythonds9.Queue import Queue
-from Graph import Graph
-from Vertex import Vertex
+from .Graph import Graph
+from .Vertex import Vertex
+from ..Queues import Queue
 import requests
 from io import StringIO
 from Visualizer import viz_graph
 
-def build_graph(word_file, count=20):
+def build_graph(word_file, count=21):
     d = {}
     g = Graph()
     current = 0

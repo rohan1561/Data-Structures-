@@ -127,7 +127,7 @@ if __name__ == '__main__':
     from random import sample
     nums = sample(range(20), k=20)
     ranks = list(range(20))
-    values = list(zip(nums, ranks))
+    values = list(zip(ranks, nums))
     print(values)
     bh = PriorityQueue(15)
     bh.build_heap(values)

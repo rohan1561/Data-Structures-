@@ -1,7 +1,6 @@
-from Graph import Graph
-from pythonds9.Queue import Queue
-from Graph import Graph
-from Vertex import Vertex
+from .Graph import Graph
+from .Vertex import Vertex
+from ..Queue import Queue
 import requests
 from io import StringIO
 from Visualizer import viz_graph
